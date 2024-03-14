@@ -1,0 +1,179 @@
+/* default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+    cursor:pointer;
+    pointer-events: auto;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f1f1ff;
+    color: #222;
+    padding: 0 2rem;
+    margin: 0 5rem;
+    font-weight: 500;
+}
+
+/* cards */
+#cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    margin: 10rem auto;
+}
+
+
+#cards .card-grid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 5rem;
+   margin: 1rem 0;
+}
+
+#cards .card {
+   background: #fff;
+   border-radius: 10px;
+   box-shadow: 0px 9px 12px -9px rgba(101,82,186,1);
+   padding: 0rem 2rem;
+}
+
+/* first card with nav category */
+#nav-bar-category  {
+    max-width: 100%;
+    width: 620px;
+    height: 6.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+#nav-bar-category ul,
+#nav-bar-category-menu ul {
+    display: flex;
+    padding: 1.2rem 0 1rem;
+}
+
+#nav-bar-category a,
+#nav-bar-category-menu a {
+   margin: 0 1rem;
+}
+
+#nav-bar-category a:hover {
+    border-bottom: 2px solid #222;
+}
+
+/* nav category with hamburger menu */
+#nav-bar-category-menu {
+    width: 320px;
+    height: 6.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#nav-bar-category-menu i {
+    margin: 0 0.5rem;
+}
+
+/* popular searches */
+#popular-searches.card {
+    padding: 1.5rem 2rem;
+}
+
+#popular-searches {
+    max-width: 100%;
+    width: 560px;
+    height: 12rem;
+}
+
+.searches {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.searches p {
+    margin-right: 0.4rem;
+}
+
+.searches span {
+    display: flex;
+    font-size: 0.8rem;
+    background: #f1f1ff;
+    padding: 0.5rem 0.4rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+
+/* card with items icons product */
+#card-items {
+    margin-top: 2rem;
+    max-width: 100%;
+    width: 400px;
+}
+
+#card-items.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 2rem 0rem 2rem;
+}
+
+#card-items .item {
+    margin-bottom: 2rem;
+}
+
+#card-items .item i {
+    font-size: 1.5rem;
+}
+
+
+@media(max-width: 980px) {
+    /* cards */
+    #cards .card-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        margin: 1rem 0;
+     }
+    
+    #nav-bar-category-menu,
+    #card-items,
+    #popular-searches 
+      {
+        width: 100%;
+    }   
+}
+
+
+@media(max-width: 580px) {
+
+    body {
+        background-color: olive;
+    }
+    /* cards */
+    #cards .card-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        margin: 1rem 0;
+     }     
+}
+
+
+
+
